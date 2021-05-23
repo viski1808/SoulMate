@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SoulMate</string>
+    <string name="registr">Регистрация</string>
+    <string name="login">Логин:</string>
+    <string name="name">Имя:</string>
+    <string name="password">Пароль:</string>
+    <string name="enter">Войти</string>
+    <string name="collection">Коллекция</string>
+    <string name="modules">Модули</string>
+    <string name="profile">Профиль</string>
+    <string name="rating">Рейтинг:</string>
+    <string name="_1">Урок 1.</string>
+    <string name="_2">Урок 2.</string>
+    <string name="_3">Урок 3.</string>
+    <string name="_4">Урок 4.</string>
+    <string name="_5">Урок 5.</string>
+</resources>
