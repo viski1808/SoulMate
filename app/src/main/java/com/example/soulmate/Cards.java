@@ -32,8 +32,7 @@ public class Cards extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Cards.this, Modules.class);
-                startActivity(intent);
+                finish();
             }
         });
         module = getIntent().getIntExtra(MODULE, 0);

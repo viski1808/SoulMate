@@ -52,8 +52,7 @@ public class Test extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Test.this, Modules.class);
-                startActivity(intent);
+                finish();
             }
         });
 

@@ -17,8 +17,7 @@ public class Collection extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Collection.this, MainMenu.class);
-                startActivity(intent);
+                finish();
             }
         });
     }

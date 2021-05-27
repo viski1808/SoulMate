@@ -72,8 +72,7 @@ public class Module extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Module.this, Modules.class);
-                startActivity(intent);
+                finish();
             }
         });
         test.setOnClickListener(new View.OnClickListener() {
@@ -179,14 +178,6 @@ public class Module extends AppCompatActivity {
 //        snapHelper.attachToRecyclerView(recyclerView);
     }
 
-}
-
-class MyTask extends AsyncTask<Void, Void, Void>{
-
-    @Override
-    protected Void doInBackground(Void... voids) {
-        return null;
-    }
 }
 
 class Img{
