@@ -29,8 +29,7 @@ public class Profile extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Profile.this, MainMenu.class);
-                startActivity(intent);
+                finish();
             }
         });
         ImageButton exit = findViewById(R.id.exit);

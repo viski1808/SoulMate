@@ -61,8 +61,7 @@ public class Modules extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Modules.this, MainMenu.class);
-                startActivity(intent);
+                finish();
             }
         });
     }
