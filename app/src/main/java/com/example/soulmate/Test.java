@@ -2,6 +2,7 @@ package com.example.soulmate;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 public class Test extends AppCompatActivity {
     private final int quantity = 8;
@@ -69,6 +71,15 @@ public class Test extends AppCompatActivity {
             case 2:
                 row = 8;
                 break;
+            case 3:
+                row = 16;
+                break;
+            case 4:
+                row = 24;
+                break;
+            case 5:
+                row = 32;
+                break;
         }
         cursor.moveToPosition(row);
         ArrayList<Integer> questions = new ArrayList<>();
@@ -99,6 +110,13 @@ public class Test extends AppCompatActivity {
                         answersEditText[i].setTextColor(Color.RED);
                     }
                     cursor.moveToPosition(finalRow);
+                }
+                for (int i = 0; i < quantity; i++){
+                    if (correct_answer[i]){
+                        ContentValues cv = new ContentValues();
+                        cv.put("Collection", 1);
+                        mydatabase.update("content", cv, "ID = " + (questions.get(i) + finalRow), null);
+                    }
                 }
             }
         });

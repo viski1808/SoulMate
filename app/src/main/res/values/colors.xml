@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">@color/teal_500</color>
+    <color name="colorPrimaryLight">@color/teal_300</color>
+    <color name="colorPrimaryDark">@color/teal_700</color>
+    <color name="colorAccent">@color/orange_500</color>
+
+    <color name="ucrop_color_toolbar">@color/teal_500</color>
+    <color name="ucrop_color_statusbar">@color/teal_700</color>
+    <color name="ucrop_color_widget_active">@color/teal_500</color>
+    <color name="ucrop_color_toolbar_widget">#fff</color>
+
+    <color name="dialog_choose_icon_color">@color/grey_600</color>
+    <color name="dialog_choose_text_color">@color/grey_600</color>
 </resources>
