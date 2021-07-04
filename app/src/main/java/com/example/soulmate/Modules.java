@@ -44,18 +44,27 @@ public class Modules extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Lesson 3", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Modules.this, Module.class);
+                intent.putExtra(MODULE, 3);
+                startActivity(intent);
             }
         });
         lesson4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Lesson 4", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Modules.this, Module.class);
+                intent.putExtra(MODULE, 4);
+                startActivity(intent);
             }
         });
         lesson5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Lesson 5", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Modules.this, Module.class);
+                intent.putExtra(MODULE, 5);
+                startActivity(intent);
             }
         });
         back.setOnClickListener(new View.OnClickListener() {

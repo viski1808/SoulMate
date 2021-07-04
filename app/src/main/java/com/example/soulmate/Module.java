@@ -90,7 +90,7 @@ public class Module extends AppCompatActivity {
             public void run() {
                 DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
                 mydatabase = databaseHelper.getReadableDatabase();
-                Cursor cursor = mydatabase.rawQuery("SELECT * FROM content;", null);
+                Cursor cursor = mydatabase.rawQuery("SELECT Image, Russian, Translate, Transcript, Description FROM content;", null);
                 cursor.moveToFirst();
                 switch (module){
                     case 1:
@@ -98,6 +98,15 @@ public class Module extends AppCompatActivity {
                         break;
                     case 2:
                         cursor.moveToPosition(8);
+                        break;
+                    case 3:
+                        cursor.moveToPosition(16);
+                        break;
+                    case 4:
+                        cursor.moveToPosition(24);
+                        break;
+                    case 5:
+                        cursor.moveToPosition(32);
                         break;
                 }
                 for (int i = 0; i < quantity; i++){

@@ -41,6 +41,15 @@ public class GridAdapter extends BaseAdapter {
             case 2:
                 step = 8;
                 break;
+            case 3:
+                step = 16;
+                break;
+            case 4:
+                step = 24;
+                break;
+            case 5:
+                step = 32;
+                break;
         }
         arrPict = new ArrayList<>();
         arrStatus = new ArrayList<>();
