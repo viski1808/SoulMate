@@ -28,7 +28,8 @@ public class MainMenu extends AppCompatActivity {
         phrases.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(MainMenu.this, Phrases.class);
+                startActivity(intent);
             }
         });
         modules.setOnClickListener(new View.OnClickListener() {
