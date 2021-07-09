@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SoulMate">
         <activity
+            android:name=".Phrases"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".Test"
             android:screenOrientation="portrait" />
         <activity
