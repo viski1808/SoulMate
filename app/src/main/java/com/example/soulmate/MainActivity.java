@@ -4,9 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -31,7 +33,11 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase db;
     DatabaseReference users;
 
-    ConstraintLayout root;
+    View root;
+
+    SharedPreferences sharedPreferences;
+    final String SAVED_NAME = "NAME";
+    final String SAVED_LOGIN = "LOGIN";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ImageButton register = findViewById(R.id.signin);
         ImageButton login = findViewById(R.id.login);
+        root = findViewById(R.id.constaintLayoutMain);
 
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
@@ -155,6 +162,11 @@ public class MainActivity extends AppCompatActivity {
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void aVoid) {
+                                                sharedPreferences = getSharedPreferences("SignIn",MODE_PRIVATE);
+                                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                                editor.putString(SAVED_NAME, user.getName());
+                                                editor.putString(SAVED_LOGIN, user.getEmail());
+                                                editor.apply();
                                                 Snackbar.make(root, "Регистрация прошла успешно!",
                                                         Snackbar.LENGTH_SHORT).show();
                                             }
